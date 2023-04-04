@@ -30,6 +30,7 @@ router.post("/create-checkout-session", async (req, res) => {
         };
       }),
       success_url: `${process.env.CLIENT_URL}/success`,
+      cancel_url: `${process.env.CLIENT_URL}/fail`,
     });
     res.status(200).send({ url: session.url });
   } catch (e) {
