@@ -39,7 +39,7 @@ router.post("/create-checkout-session", async (req, res) => {
 
 router.get("/", (req, res) => {
   res.json({
-    hello: "hi",
+    hello: "hi this is is stripe backend",
   });
 });
 
