@@ -29,7 +29,7 @@ router.post("/create-checkout-session", async (req, res) => {
           quantity: item.quantity,
         };
       }),
-      success_url: `https://www.google.com/`,
+      success_url: `${process.env.CLIENT_URL}/success`,
     });
     res.status(200).send({ url: session.url });
   } catch (e) {
